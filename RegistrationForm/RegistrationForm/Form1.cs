@@ -34,6 +34,7 @@ namespace RegistrationForm
                 lbl.Text = "PIN2";
                 groupBox1.Controls.Add(lbl);
                 TextBox txt = new TextBox();
+                txt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
                 txt.Location = new System.Drawing.Point(96, 96);
                 txt.Size = new System.Drawing.Size(184, 20);
                 txt.Name = "textboxx";
@@ -64,6 +65,28 @@ namespace RegistrationForm
                     e.Cancel = true;
                     MessageBox.Show("Поле PIN не может содержать буквы");
                 }
+            }
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            /*
+             * This code is commented because of task requirements 
+            if (!char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox. Show("Поле PIN не может содержать буквы");
+            }
+            */
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                errorProvider1.SetError(textBox1, "Must be letter");
+                MessageBox.Show("Поле Name не может содержать цифры");
             }
         }
     }
