@@ -1,6 +1,6 @@
 ﻿namespace MdiApplication
 {
-    partial class Form1
+    partial class ParentForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -28,10 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // ParentForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "ParentForm";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
