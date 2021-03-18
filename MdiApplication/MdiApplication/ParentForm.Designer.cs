@@ -41,8 +41,12 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.spWin = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.spData = new System.Windows.Forms.StatusStrip();
             this.MdiMenu.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            this.spWin.SuspendLayout();
             this.SuspendLayout();
             // 
             // MdiMenu
@@ -54,7 +58,7 @@
             this.MdiMenu.Location = new System.Drawing.Point(0, 0);
             this.MdiMenu.MdiWindowListItem = this.WindowMenuItem;
             this.MdiMenu.Name = "MdiMenu";
-            this.MdiMenu.Size = new System.Drawing.Size(402, 28);
+            this.MdiMenu.Size = new System.Drawing.Size(432, 28);
             this.MdiMenu.TabIndex = 1;
             this.MdiMenu.Text = "menuStrip1";
             // 
@@ -70,14 +74,14 @@
             // NewMenuItem
             // 
             this.NewMenuItem.Name = "NewMenuItem";
-            this.NewMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.NewMenuItem.Size = new System.Drawing.Size(122, 26);
             this.NewMenuItem.Text = "&New";
             this.NewMenuItem.Click += new System.EventHandler(this.NewMenuItem_Click);
             // 
             // ExitMenuItem
             // 
             this.ExitMenuItem.Name = "ExitMenuItem";
-            this.ExitMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.ExitMenuItem.Size = new System.Drawing.Size(122, 26);
             this.ExitMenuItem.Text = "&Exit";
             this.ExitMenuItem.Click += new System.EventHandler(this.ExitMenuItem_Click);
             // 
@@ -93,14 +97,14 @@
             // WindowCascadeMenuItem
             // 
             this.WindowCascadeMenuItem.Name = "WindowCascadeMenuItem";
-            this.WindowCascadeMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.WindowCascadeMenuItem.Size = new System.Drawing.Size(147, 26);
             this.WindowCascadeMenuItem.Text = "&Cascade";
             this.WindowCascadeMenuItem.Click += new System.EventHandler(this.WindowCascadeMenuItem_Click);
             // 
             // WindowTileMenuItem
             // 
             this.WindowTileMenuItem.Name = "WindowTileMenuItem";
-            this.WindowTileMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.WindowTileMenuItem.Size = new System.Drawing.Size(147, 26);
             this.WindowTileMenuItem.Text = "&Tile";
             this.WindowTileMenuItem.Click += new System.EventHandler(this.WindowTileMenuItem_Click);
             // 
@@ -114,7 +118,7 @@
             this.toolStripButton3});
             this.toolStrip1.Location = new System.Drawing.Point(0, 28);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(402, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(432, 27);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
@@ -156,12 +160,41 @@
             this.toolStripButton3.Tag = "Tile";
             this.toolStripButton3.Text = "toolStripButton3";
             this.toolStripButton3.ToolTipText = "Windows title";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
+            // 
+            // spWin
+            // 
+            this.spWin.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.spWin.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
+            this.spWin.Location = new System.Drawing.Point(0, 277);
+            this.spWin.Name = "spWin";
+            this.spWin.Size = new System.Drawing.Size(432, 26);
+            this.spWin.TabIndex = 4;
+            this.spWin.Text = "Status";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(151, 20);
+            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            // 
+            // spData
+            // 
+            this.spData.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.spData.Location = new System.Drawing.Point(0, 255);
+            this.spData.Name = "spData";
+            this.spData.Size = new System.Drawing.Size(432, 22);
+            this.spData.TabIndex = 5;
+            this.spData.Text = "Data";
             // 
             // ParentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(402, 273);
+            this.ClientSize = new System.Drawing.Size(432, 303);
+            this.Controls.Add(this.spData);
+            this.Controls.Add(this.spWin);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.MdiMenu);
             this.IsMdiContainer = true;
@@ -172,6 +205,8 @@
             this.MdiMenu.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.spWin.ResumeLayout(false);
+            this.spWin.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,6 +226,9 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.StatusStrip spWin;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.StatusStrip spData;
     }
 }
 

@@ -40,7 +40,7 @@
             this.ChildTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ChildTextBox.Location = new System.Drawing.Point(0, 28);
             this.ChildTextBox.Name = "ChildTextBox";
-            this.ChildTextBox.Size = new System.Drawing.Size(311, 138);
+            this.ChildTextBox.Size = new System.Drawing.Size(298, 173);
             this.ChildTextBox.TabIndex = 0;
             this.ChildTextBox.Text = "";
             // 
@@ -51,7 +51,7 @@
             this.FormatMenuItem});
             this.ChildWIndowMenu.Location = new System.Drawing.Point(0, 0);
             this.ChildWIndowMenu.Name = "ChildWIndowMenu";
-            this.ChildWIndowMenu.Size = new System.Drawing.Size(311, 28);
+            this.ChildWIndowMenu.Size = new System.Drawing.Size(298, 28);
             this.ChildWIndowMenu.TabIndex = 1;
             this.ChildWIndowMenu.Text = "menuStrip1";
             // 
@@ -68,7 +68,7 @@
             // ToggleMenuItem
             // 
             this.ToggleMenuItem.Name = "ToggleMenuItem";
-            this.ToggleMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.ToggleMenuItem.Size = new System.Drawing.Size(219, 26);
             this.ToggleMenuItem.Text = "Toggle Foreground";
             this.ToggleMenuItem.Click += new System.EventHandler(this.ToggleMenuItem_Click);
             // 
@@ -76,7 +76,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(311, 166);
+            this.ClientSize = new System.Drawing.Size(298, 201);
             this.Controls.Add(this.ChildTextBox);
             this.Controls.Add(this.ChildWIndowMenu);
             this.MainMenuStrip = this.ChildWIndowMenu;

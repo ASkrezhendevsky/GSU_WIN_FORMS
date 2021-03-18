@@ -16,6 +16,9 @@ namespace MdiApplication
         public ParentForm()
         {
             InitializeComponent();
+            // Свойству Text панели spData устанавливается текущая дата
+            spData.Text =
+            Convert.ToString(System.DateTime.Today.ToLongDateString());
         }
 
         private void ExitMenuItem_Click(object sender, EventArgs e)
@@ -54,12 +57,18 @@ namespace MdiApplication
                     break;
                 case "Cascade":
                     this.LayoutMdi(System.Windows.Forms.MdiLayout.Cascade);
+                    spWin.Text = "Windows is horizontal";
                     break;
                 case "Title":
-                    this.LayoutMdi
-                    (System.Windows.Forms.MdiLayout.TileHorizontal);
+                    this.LayoutMdi(System.Windows.Forms.MdiLayout.TileHorizontal);
+                    spWin.Text = "Windows is cascade";
                     break;
             }
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
