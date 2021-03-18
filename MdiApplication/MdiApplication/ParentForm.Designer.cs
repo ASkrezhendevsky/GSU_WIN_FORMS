@@ -65,6 +65,7 @@
             this.NewMenuItem.Name = "NewMenuItem";
             this.NewMenuItem.Size = new System.Drawing.Size(224, 26);
             this.NewMenuItem.Text = "&New";
+            this.NewMenuItem.Click += new System.EventHandler(this.NewMenuItem_Click);
             // 
             // ExitMenuItem
             // 

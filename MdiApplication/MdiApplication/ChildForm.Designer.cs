@@ -40,7 +40,7 @@
             this.ChildTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ChildTextBox.Location = new System.Drawing.Point(0, 28);
             this.ChildTextBox.Name = "ChildTextBox";
-            this.ChildTextBox.Size = new System.Drawing.Size(800, 422);
+            this.ChildTextBox.Size = new System.Drawing.Size(311, 138);
             this.ChildTextBox.TabIndex = 0;
             this.ChildTextBox.Text = "";
             // 
@@ -51,7 +51,7 @@
             this.FormatMenuItem});
             this.ChildWIndowMenu.Location = new System.Drawing.Point(0, 0);
             this.ChildWIndowMenu.Name = "ChildWIndowMenu";
-            this.ChildWIndowMenu.Size = new System.Drawing.Size(800, 28);
+            this.ChildWIndowMenu.Size = new System.Drawing.Size(311, 28);
             this.ChildWIndowMenu.TabIndex = 1;
             this.ChildWIndowMenu.Text = "menuStrip1";
             // 
@@ -60,6 +60,7 @@
             this.FormatMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToggleMenuItem});
             this.FormatMenuItem.MergeAction = System.Windows.Forms.MergeAction.Insert;
+            this.FormatMenuItem.MergeIndex = 1;
             this.FormatMenuItem.Name = "FormatMenuItem";
             this.FormatMenuItem.Size = new System.Drawing.Size(70, 24);
             this.FormatMenuItem.Text = "Format";
@@ -75,7 +76,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(311, 166);
             this.Controls.Add(this.ChildTextBox);
             this.Controls.Add(this.ChildWIndowMenu);
             this.MainMenuStrip = this.ChildWIndowMenu;
