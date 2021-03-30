@@ -16,5 +16,16 @@ namespace TestStandartDialog
         {
             InitializeComponent();
         }
+
+        private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1.Filter = "txt files (*.txt)|*.txt";
+            if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK
+                        && saveFileDialog1.FileName.Length > 0)
+            {
+                richTextBox1.SaveFile(saveFileDialog1.FileName,
+                RichTextBoxStreamType.PlainText);
+            }
+        }
     }
 }
