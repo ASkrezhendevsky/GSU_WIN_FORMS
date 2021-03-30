@@ -1,13 +1,13 @@
 ﻿namespace WinTimer1
 {
-    partial class Form1
+    partial class UserControlTimer
     {
-        /// <summary>
+        /// <summary> 
         /// Обязательная переменная конструктора.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Освободить все используемые ресурсы.
         /// </summary>
         /// <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
@@ -20,40 +20,47 @@
             base.Dispose(disposing);
         }
 
-        #region Код, автоматически созданный конструктором форм Windows
+        #region Код, автоматически созданный конструктором компонентов
 
-        /// <summary>
+        /// <summary> 
         /// Требуемый метод для поддержки конструктора — не изменяйте 
         /// содержимое этого метода с помощью редактора кода.
         /// </summary>
         private void InitializeComponent()
         {
-            this.userControlTimer1 = new WinTimer1.UserControlTimer();
+            this.components = new System.ComponentModel.Container();
+            this.label1 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
-            // userControlTimer1
+            // label1
             // 
-            this.userControlTimer1.Location = new System.Drawing.Point(0, 0);
-            this.userControlTimer1.Name = "userControlTimer1";
-            this.userControlTimer1.Size = new System.Drawing.Size(150, 150);
-            this.userControlTimer1.TabIndex = 0;
-            this.userControlTimer1.TimeEnabled = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 17);
+            this.label1.TabIndex = 0;
             // 
-            // Form1
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // UserControlTimer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.userControlTimer1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Controls.Add(this.label1);
+            this.Name = "UserControlTimer";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private UserControlTimer userControlTimer1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
-
