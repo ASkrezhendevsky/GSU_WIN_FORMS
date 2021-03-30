@@ -27,5 +27,13 @@ namespace TestStandartDialog
                 RichTextBoxStreamType.PlainText);
             }
         }
+
+        private void colorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                richTextBox1.BackColor = colorDialog1.Color;
+            }
+        }
     }
 }
