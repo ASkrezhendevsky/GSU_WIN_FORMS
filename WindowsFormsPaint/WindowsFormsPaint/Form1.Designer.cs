@@ -208,7 +208,7 @@
             this.toolStripButton5});
             this.toolStrip1.Location = new System.Drawing.Point(0, 28);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(40, 418);
+            this.toolStrip1.Size = new System.Drawing.Size(30, 418);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -218,7 +218,7 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(37, 24);
+            this.toolStripButton1.Size = new System.Drawing.Size(27, 24);
             this.toolStripButton1.Text = "toolStripButton1";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -262,9 +262,9 @@
             this.panel1.Controls.Add(this.trackBar1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(40, 346);
+            this.panel1.Location = new System.Drawing.Point(30, 346);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(590, 100);
+            this.panel1.Size = new System.Drawing.Size(600, 100);
             this.panel1.TabIndex = 2;
             // 
             // trackBar1
@@ -288,18 +288,20 @@
             this.picDrawingSurface.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picDrawingSurface.Location = new System.Drawing.Point(0, 0);
             this.picDrawingSurface.Name = "picDrawingSurface";
-            this.picDrawingSurface.Size = new System.Drawing.Size(590, 318);
+            this.picDrawingSurface.Size = new System.Drawing.Size(600, 318);
             this.picDrawingSurface.TabIndex = 3;
             this.picDrawingSurface.TabStop = false;
             this.picDrawingSurface.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            this.picDrawingSurface.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picDrawingSurface_MouseMove);
+            this.picDrawingSurface.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picDrawingSurface_MouseUp);
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.picDrawingSurface);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(40, 28);
+            this.panel2.Location = new System.Drawing.Point(30, 28);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(590, 318);
+            this.panel2.Size = new System.Drawing.Size(600, 318);
             this.panel2.TabIndex = 4;
             // 
             // Form1

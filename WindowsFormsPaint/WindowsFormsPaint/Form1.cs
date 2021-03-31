@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
@@ -13,9 +14,16 @@ namespace WindowsFormsPaint
 {
     public partial class Form1 : Form
     {
+        bool drawing;
+        GraphicsPath currentPath;
+        Point oldLocation;
+        Pen currentPen;
+
         public Form1()
         {
             InitializeComponent();
+            drawing = false; //Переменная, ответственная за рисование
+            currentPen = new Pen(Color.Black); 
         }
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
@@ -43,6 +51,13 @@ namespace WindowsFormsPaint
             {
                 MessageBox.Show("Сначала создайте новый файл!");
                 return;
+            }
+
+            if (e.Button == MouseButtons.Left)
+            {
+                drawing = true;
+                oldLocation = e.Location;
+                currentPath = new GraphicsPath();
             }
         }
 
@@ -106,6 +121,29 @@ namespace WindowsFormsPaint
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void picDrawingSurface_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (drawing)
+            {
+                Graphics g = Graphics.FromImage(picDrawingSurface.Image);
+                currentPath.AddLine(oldLocation, e.Location);
+                g.DrawPath(currentPen, currentPath);
+                oldLocation = e.Location;
+                g.Dispose();
+                picDrawingSurface.Invalidate();
+            }
+        }
+
+        private void picDrawingSurface_MouseUp(object sender, MouseEventArgs e)
+        {
+            drawing = false;
+            try
+            {
+                currentPath.Dispose();
+            }
+            catch { };
         }
     }
 }
