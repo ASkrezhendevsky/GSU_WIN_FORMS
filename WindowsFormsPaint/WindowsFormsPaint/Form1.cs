@@ -197,5 +197,29 @@ namespace WindowsFormsPaint
             }
             else MessageBox.Show("История пуста");
         }
+
+        private void solidToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            currentPen.DashStyle = DashStyle.Solid;
+            solidStyleMenu.Checked = true;
+            dashDotDotStyleMenu.Checked = false;
+            dashDotDotStyleMenu.Checked = false;
+        }
+
+        private void dotToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            currentPen.DashStyle = DashStyle.Dot;
+            solidStyleMenu.Checked = true;
+            dashDotDotStyleMenu.Checked = false;
+            dashDotDotStyleMenu.Checked = false;
+        }
+
+        private void deshDotDotToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            currentPen.DashStyle = DashStyle.DashDotDot;
+            solidStyleMenu.Checked = true;
+            dashDotDotStyleMenu.Checked = false;
+            dashDotDotStyleMenu.Checked = false;
+        }
     }
 }
