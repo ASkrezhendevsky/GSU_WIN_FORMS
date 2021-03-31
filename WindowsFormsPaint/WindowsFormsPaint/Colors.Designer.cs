@@ -28,74 +28,101 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
-            this.hScrollBar2 = new System.Windows.Forms.HScrollBar();
-            this.hScrollBar3 = new System.Windows.Forms.HScrollBar();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.picResultColor = new System.Windows.Forms.PictureBox();
+            this.Scroll_Blue = new System.Windows.Forms.HScrollBar();
+            this.Scroll_Green = new System.Windows.Forms.HScrollBar();
+            this.Scroll_Red = new System.Windows.Forms.HScrollBar();
+            this.numeric_Blue = new System.Windows.Forms.NumericUpDown();
+            this.numeric_Green = new System.Windows.Forms.NumericUpDown();
+            this.numeric_Red = new System.Windows.Forms.NumericUpDown();
             this.redLabel = new System.Windows.Forms.Label();
             this.greenLabel = new System.Windows.Forms.Label();
             this.blueLabel = new System.Windows.Forms.Label();
             this.buttonOk = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonOtherColors = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picResultColor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numeric_Blue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numeric_Green)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numeric_Red)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // picResultColor
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(332, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(77, 77);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.picResultColor.Location = new System.Drawing.Point(332, 21);
+            this.picResultColor.Name = "picResultColor";
+            this.picResultColor.Size = new System.Drawing.Size(77, 77);
+            this.picResultColor.TabIndex = 0;
+            this.picResultColor.TabStop = false;
             // 
-            // hScrollBar1
+            // Scroll_Blue
             // 
-            this.hScrollBar1.Location = new System.Drawing.Point(71, 76);
-            this.hScrollBar1.Name = "hScrollBar1";
-            this.hScrollBar1.Size = new System.Drawing.Size(194, 21);
-            this.hScrollBar1.TabIndex = 1;
+            this.Scroll_Blue.LargeChange = 1;
+            this.Scroll_Blue.Location = new System.Drawing.Point(71, 76);
+            this.Scroll_Blue.Maximum = 255;
+            this.Scroll_Blue.Name = "Scroll_Blue";
+            this.Scroll_Blue.Size = new System.Drawing.Size(194, 21);
+            this.Scroll_Blue.TabIndex = 1;
+            this.Scroll_Blue.ValueChanged += new System.EventHandler(this.ScrollColorValueChanged);
             // 
-            // hScrollBar2
+            // Scroll_Green
             // 
-            this.hScrollBar2.Location = new System.Drawing.Point(71, 48);
-            this.hScrollBar2.Name = "hScrollBar2";
-            this.hScrollBar2.Size = new System.Drawing.Size(194, 21);
-            this.hScrollBar2.TabIndex = 2;
+            this.Scroll_Green.LargeChange = 1;
+            this.Scroll_Green.Location = new System.Drawing.Point(71, 48);
+            this.Scroll_Green.Maximum = 255;
+            this.Scroll_Green.Name = "Scroll_Green";
+            this.Scroll_Green.Size = new System.Drawing.Size(194, 21);
+            this.Scroll_Green.TabIndex = 2;
+            this.Scroll_Green.ValueChanged += new System.EventHandler(this.ScrollColorValueChanged);
             // 
-            // hScrollBar3
+            // Scroll_Red
             // 
-            this.hScrollBar3.Location = new System.Drawing.Point(71, 16);
-            this.hScrollBar3.Name = "hScrollBar3";
-            this.hScrollBar3.Size = new System.Drawing.Size(194, 21);
-            this.hScrollBar3.TabIndex = 3;
+            this.Scroll_Red.LargeChange = 1;
+            this.Scroll_Red.Location = new System.Drawing.Point(71, 16);
+            this.Scroll_Red.Maximum = 255;
+            this.Scroll_Red.Name = "Scroll_Red";
+            this.Scroll_Red.Size = new System.Drawing.Size(194, 21);
+            this.Scroll_Red.TabIndex = 3;
+            this.Scroll_Red.ValueChanged += new System.EventHandler(this.ScrollColorValueChanged);
             // 
-            // numericUpDown1
+            // numeric_Blue
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(282, 71);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(44, 22);
-            this.numericUpDown1.TabIndex = 4;
+            this.numeric_Blue.Location = new System.Drawing.Point(282, 76);
+            this.numeric_Blue.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.numeric_Blue.Name = "numeric_Blue";
+            this.numeric_Blue.Size = new System.Drawing.Size(44, 22);
+            this.numeric_Blue.TabIndex = 4;
+            this.numeric_Blue.ValueChanged += new System.EventHandler(this.numericColorValueChanged);
             // 
-            // numericUpDown2
+            // numeric_Green
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(282, 43);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(44, 22);
-            this.numericUpDown2.TabIndex = 5;
+            this.numeric_Green.Location = new System.Drawing.Point(282, 48);
+            this.numeric_Green.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.numeric_Green.Name = "numeric_Green";
+            this.numeric_Green.Size = new System.Drawing.Size(44, 22);
+            this.numeric_Green.TabIndex = 5;
+            this.numeric_Green.ValueChanged += new System.EventHandler(this.numericColorValueChanged);
             // 
-            // numericUpDown3
+            // numeric_Red
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(282, 15);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(44, 22);
-            this.numericUpDown3.TabIndex = 6;
+            this.numeric_Red.Location = new System.Drawing.Point(282, 20);
+            this.numeric_Red.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.numeric_Red.Name = "numeric_Red";
+            this.numeric_Red.Size = new System.Drawing.Size(44, 22);
+            this.numeric_Red.TabIndex = 6;
+            this.numeric_Red.ValueChanged += new System.EventHandler(this.numericColorValueChanged);
             // 
             // redLabel
             // 
@@ -132,6 +159,7 @@
             this.buttonOk.TabIndex = 10;
             this.buttonOk.Text = "Ok";
             this.buttonOk.UseVisualStyleBackColor = true;
+            this.buttonOk.Click += new System.EventHandler(this.buttonOk_Click);
             // 
             // buttonCancel
             // 
@@ -141,6 +169,7 @@
             this.buttonCancel.TabIndex = 11;
             this.buttonCancel.Text = "Cancel";
             this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // buttonOtherColors
             // 
@@ -150,6 +179,7 @@
             this.buttonOtherColors.TabIndex = 12;
             this.buttonOtherColors.Text = "Other Colors";
             this.buttonOtherColors.UseVisualStyleBackColor = true;
+            this.buttonOtherColors.Click += new System.EventHandler(this.buttonOtherColors_Click);
             // 
             // Colors
             // 
@@ -162,19 +192,19 @@
             this.Controls.Add(this.blueLabel);
             this.Controls.Add(this.greenLabel);
             this.Controls.Add(this.redLabel);
-            this.Controls.Add(this.numericUpDown3);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.hScrollBar3);
-            this.Controls.Add(this.hScrollBar2);
-            this.Controls.Add(this.hScrollBar1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.numeric_Red);
+            this.Controls.Add(this.numeric_Green);
+            this.Controls.Add(this.numeric_Blue);
+            this.Controls.Add(this.Scroll_Red);
+            this.Controls.Add(this.Scroll_Green);
+            this.Controls.Add(this.Scroll_Blue);
+            this.Controls.Add(this.picResultColor);
             this.Name = "Colors";
             this.Text = "Colors";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picResultColor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numeric_Blue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numeric_Green)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numeric_Red)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,13 +212,13 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.HScrollBar hScrollBar1;
-        private System.Windows.Forms.HScrollBar hScrollBar2;
-        private System.Windows.Forms.HScrollBar hScrollBar3;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.PictureBox picResultColor;
+        private System.Windows.Forms.HScrollBar Scroll_Blue;
+        private System.Windows.Forms.HScrollBar Scroll_Green;
+        private System.Windows.Forms.HScrollBar Scroll_Red;
+        private System.Windows.Forms.NumericUpDown numeric_Blue;
+        private System.Windows.Forms.NumericUpDown numeric_Green;
+        private System.Windows.Forms.NumericUpDown numeric_Red;
         private System.Windows.Forms.Label redLabel;
         private System.Windows.Forms.Label greenLabel;
         private System.Windows.Forms.Label blueLabel;

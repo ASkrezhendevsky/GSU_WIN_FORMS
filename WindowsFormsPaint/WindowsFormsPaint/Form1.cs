@@ -225,5 +225,13 @@ namespace WindowsFormsPaint
             dashDotDotStyleMenu.Checked = false;
             dashDotDotStyleMenu.Checked = false;
         }
+
+        private void colorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Colors colors = new Colors(currentPen.Color);
+            if (colors.ShowDialog() == DialogResult.OK) {
+                currentPen.Color = colors.ColorResult;
+            }
+        }
     }
 }

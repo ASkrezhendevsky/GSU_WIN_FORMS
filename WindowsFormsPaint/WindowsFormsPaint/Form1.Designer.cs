@@ -57,6 +57,7 @@
             this.label_XY = new System.Windows.Forms.Label();
             this.picDrawingSurface = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.colorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -149,7 +150,8 @@
             // penToolStripMenuItem
             // 
             this.penToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.styleToolStripMenuItem});
+            this.styleToolStripMenuItem,
+            this.colorToolStripMenuItem});
             this.penToolStripMenuItem.Name = "penToolStripMenuItem";
             this.penToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.penToolStripMenuItem.Text = "Pen";
@@ -313,6 +315,13 @@
             this.panel2.Size = new System.Drawing.Size(600, 318);
             this.panel2.TabIndex = 4;
             // 
+            // colorToolStripMenuItem
+            // 
+            this.colorToolStripMenuItem.Name = "colorToolStripMenuItem";
+            this.colorToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.colorToolStripMenuItem.Text = "Color";
+            this.colorToolStripMenuItem.Click += new System.EventHandler(this.colorToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -369,6 +378,7 @@
         private System.Windows.Forms.Label label_XY;
         private System.Windows.Forms.PictureBox picDrawingSurface;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ToolStripMenuItem colorToolStripMenuItem;
     }
 }
 
