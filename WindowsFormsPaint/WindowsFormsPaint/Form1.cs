@@ -18,6 +18,7 @@ namespace WindowsFormsPaint
         GraphicsPath currentPath;
         Point oldLocation;
         Pen currentPen;
+        Color historyColor;
 
         public Form1()
         {
@@ -57,6 +58,14 @@ namespace WindowsFormsPaint
             {
                 drawing = true;
                 oldLocation = e.Location;
+                historyColor = currentPen.Color;
+                currentPath = new GraphicsPath();
+            }
+            if (e.Button == MouseButtons.Right)
+            {
+                drawing = true;
+                oldLocation = e.Location;
+                currentPen.Color = Color.White;
                 currentPath = new GraphicsPath();
             }
         }
@@ -142,6 +151,7 @@ namespace WindowsFormsPaint
             try
             {
                 currentPath.Dispose();
+                currentPen.Color = historyColor;
             }
             catch { };
         }
