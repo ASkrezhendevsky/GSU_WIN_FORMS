@@ -53,6 +53,10 @@ namespace WindowsFormsPaint
             Bitmap pic = new Bitmap(750, 500);
             picDrawingSurface.Image = pic;
 
+            Graphics g = Graphics.FromImage(picDrawingSurface.Image);
+            g.Clear(Color.White);
+            g.DrawImage(picDrawingSurface.Image, 0, 0, 750, 500);
+
             History.Add(new Bitmap(picDrawingSurface.Image));
         }
 
