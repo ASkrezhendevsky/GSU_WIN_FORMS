@@ -24,7 +24,8 @@ namespace WindowsFormsPaint
         {
             InitializeComponent();
             drawing = false; //Переменная, ответственная за рисование
-            currentPen = new Pen(Color.Black); 
+            currentPen = new Pen(Color.Black);
+            currentPen.Width = trackBarPen.Value;
         }
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
@@ -156,6 +157,11 @@ namespace WindowsFormsPaint
                 currentPen.Color = historyColor;
             }
             catch { };
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            currentPen.Width = trackBarPen.Value;
         }
     }
 }
