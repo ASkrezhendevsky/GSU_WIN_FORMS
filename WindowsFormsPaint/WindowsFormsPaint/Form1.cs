@@ -20,12 +20,16 @@ namespace WindowsFormsPaint
         Pen currentPen;
         Color historyColor;
 
+        int historyCounter; //Счетчик истории
+        List<Image> History;
+
         public Form1()
         {
             InitializeComponent();
             drawing = false; //Переменная, ответственная за рисование
             currentPen = new Pen(Color.Black);
             currentPen.Width = trackBarPen.Value;
+            History = new List<Image>();
         }
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
@@ -43,8 +47,13 @@ namespace WindowsFormsPaint
                 }
             }
 
+            History.Clear();
+            historyCounter = 0;
+
             Bitmap pic = new Bitmap(750, 500);
             picDrawingSurface.Image = pic;
+
+            History.Add(new Bitmap(picDrawingSurface.Image));
         }
 
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
@@ -150,11 +159,18 @@ namespace WindowsFormsPaint
 
         private void picDrawingSurface_MouseUp(object sender, MouseEventArgs e)
         {
+            currentPen.Color = historyColor;
+
+            History.RemoveRange(historyCounter + 1, History.Count - historyCounter - 1);
+            History.Add(new Bitmap(picDrawingSurface.Image));
+            if (historyCounter + 1 < 10) historyCounter++;
+            if (History.Count - 1 == 10) History.RemoveAt(0);
+
             drawing = false;
             try
             {
                 currentPath.Dispose();
-                currentPen.Color = historyColor;
+                
             }
             catch { };
         }
@@ -162,6 +178,24 @@ namespace WindowsFormsPaint
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
             currentPen.Width = trackBarPen.Value;
+        }
+
+        private void undoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (History.Count != 0 && historyCounter != 0)
+            {
+                picDrawingSurface.Image = new Bitmap(History[--historyCounter]);
+            }
+            else MessageBox.Show("История пуста");
+        }
+
+        private void redoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (historyCounter < History.Count - 1)
+            {
+                picDrawingSurface.Image = new Bitmap(History[++historyCounter]);
+            }
+            else MessageBox.Show("История пуста");
         }
     }
 }

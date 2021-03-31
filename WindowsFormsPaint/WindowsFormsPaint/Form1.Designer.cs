@@ -53,14 +53,14 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.trackBarPen = new System.Windows.Forms.TrackBar();
             this.label_XY = new System.Windows.Forms.Label();
             this.picDrawingSurface = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarPen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDrawingSurface)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -135,14 +135,16 @@
             // undoToolStripMenuItem
             // 
             this.undoToolStripMenuItem.Name = "undoToolStripMenuItem";
-            this.undoToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
+            this.undoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.undoToolStripMenuItem.Text = "Undo";
+            this.undoToolStripMenuItem.Click += new System.EventHandler(this.undoToolStripMenuItem_Click);
             // 
             // redoToolStripMenuItem
             // 
             this.redoToolStripMenuItem.Name = "redoToolStripMenuItem";
-            this.redoToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
+            this.redoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.redoToolStripMenuItem.Text = "Redo";
+            this.redoToolStripMenuItem.Click += new System.EventHandler(this.redoToolStripMenuItem_Click);
             // 
             // penToolStripMenuItem
             // 
@@ -259,7 +261,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.trackBar1);
+            this.panel1.Controls.Add(this.trackBarPen);
             this.panel1.Controls.Add(this.label_XY);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(30, 346);
@@ -267,16 +269,16 @@
             this.panel1.Size = new System.Drawing.Size(600, 100);
             this.panel1.TabIndex = 2;
             // 
-            // trackBar1
+            // trackBarPen
             // 
-            this.trackBar1.Location = new System.Drawing.Point(427, 18);
-            this.trackBar1.Maximum = 20;
-            this.trackBar1.Minimum = 1;
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(104, 56);
-            this.trackBar1.TabIndex = 1;
-            this.trackBar1.Value = 5;
-            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
+            this.trackBarPen.Location = new System.Drawing.Point(427, 18);
+            this.trackBarPen.Maximum = 20;
+            this.trackBarPen.Minimum = 1;
+            this.trackBarPen.Name = "trackBarPen";
+            this.trackBarPen.Size = new System.Drawing.Size(104, 56);
+            this.trackBarPen.TabIndex = 1;
+            this.trackBarPen.Value = 5;
+            this.trackBarPen.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
             // label_XY
             // 
@@ -326,7 +328,7 @@
             this.toolStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarPen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDrawingSurface)).EndInit();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -360,7 +362,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton toolStripButton5;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.TrackBar trackBarPen;
         private System.Windows.Forms.Label label_XY;
         private System.Windows.Forms.PictureBox picDrawingSurface;
         private System.Windows.Forms.Panel panel2;
