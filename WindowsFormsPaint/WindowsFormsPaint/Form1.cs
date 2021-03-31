@@ -143,6 +143,8 @@ namespace WindowsFormsPaint
                 g.Dispose();
                 picDrawingSurface.Invalidate();
             }
+
+            label_XY.Text = e.X + ", " + e.Y;
         }
 
         private void picDrawingSurface_MouseUp(object sender, MouseEventArgs e)
