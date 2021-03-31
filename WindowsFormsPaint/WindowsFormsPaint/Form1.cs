@@ -87,5 +87,25 @@ namespace WindowsFormsPaint
                 picDrawingSurface.Load(OP.FileName);
                 picDrawingSurface.AutoSize = true;
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            newToolStripMenuItem_Click(sender, e);
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            saveMenu_Click(sender, e);
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            openToolStripMenuItem_Click(sender, e);
+        }
+
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
