@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace WindowsFormsPaint
 {
-    public partial class Colors : Form
+    public partial class ColorsForm : Form
     {
         private Color colorResult;
 
         public Color ColorResult { get => colorResult; }
 
-        public Colors(Color color)
+        public ColorsForm(Color color)
         {
             InitializeComponent();
             Scroll_Red.Tag = numeric_Red;

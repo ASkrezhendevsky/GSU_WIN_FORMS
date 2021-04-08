@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsPaint
 {
-    partial class Colors
+    partial class ColorsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -181,7 +181,7 @@
             this.buttonOtherColors.UseVisualStyleBackColor = true;
             this.buttonOtherColors.Click += new System.EventHandler(this.buttonOtherColors_Click);
             // 
-            // Colors
+            // ColorsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -199,7 +199,7 @@
             this.Controls.Add(this.Scroll_Green);
             this.Controls.Add(this.Scroll_Blue);
             this.Controls.Add(this.picResultColor);
-            this.Name = "Colors";
+            this.Name = "ColorsForm";
             this.Text = "Colors";
             ((System.ComponentModel.ISupportInitialize)(this.picResultColor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numeric_Blue)).EndInit();

@@ -228,7 +228,7 @@ namespace WindowsFormsPaint
 
         private void colorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Colors colors = new Colors(currentPen.Color);
+            ColorsForm colors = new ColorsForm(currentPen.Color);
             if (colors.ShowDialog() == DialogResult.OK) {
                 currentPen.Color = colors.ColorResult;
             }
